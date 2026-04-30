@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ-Happy · SUPER JUNIOR</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-top">
+    <div>
+      <div class="eyebrow"><a href="../index.html" style="color:var(--accent);text-decoration:none">← SUPER JUNIOR</a></div>
+      <div class="title">SJ-Happy<span>이특 · 희철 · 신동 · 예성 · 려욱 · 李特 · 希澈 · 神童 · 藝聲 · 厲旭</span></div>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('zh-s',this)">简中</button>
+      <button class="lang-btn" onclick="setLang('zh-t',this)">繁中</button>
+      <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn" onclick="setLang('ko',this)">한국어</button>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <a href="../index.html#links" id="nav-links">官方链接</a>
+  <a href="../index.html#members" id="nav-mem">成员</a>
+  <a href="../index.html#subunits" id="nav-sub">小分队</a>
+  <a href="../index.html#albums" id="nav-al">专辑</a>
+  <a href="../index.html#mv" id="nav-mv">MV</a>
+</nav>
+
+<div class="body">
+
+  <div class="section">
+    <div class="sec-label" id="sec-links">链接</div>
+    <div class="link-grid">
+      <div class="placeholder">// 待添加链接</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label" id="sec-content">内容</div>
+    <div class="placeholder" id="ph-text">// 待添加内容 · Content coming soon</div>
+  </div>
+
+</div>
+<div class="footer">💙 Pearl Sapphire Blue Forever &nbsp;·&nbsp; E.L.F &nbsp;·&nbsp; 2005~</div>
+
+<script>
+const T={
+  'zh-s':{links:'链接',mem:'成员',sub:'小分队',al:'专辑',mv:'MV',content:'内容'},
+  'zh-t':{links:'連結',mem:'成員',sub:'小分隊',al:'專輯',mv:'MV',content:'內容'},
+  'en':{links:'Links',mem:'Members',sub:'Sub-units',al:'Albums',mv:'MVs',content:'Content'},
+  'ko':{links:'링크',mem:'멤버',sub:'서브유닛',al:'앨범',mv:'MV',content:'콘텐츠'}
+};
+function setLang(l,btn){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const t=T[l]||T['zh-s'];
+  document.getElementById('nav-links').textContent=t.links;
+  document.getElementById('nav-mem').textContent=t.mem;
+  document.getElementById('nav-sub').textContent=t.sub;
+  document.getElementById('nav-al').textContent=t.al;
+  document.getElementById('nav-mv').textContent=t.mv;
+  document.getElementById('sec-links').childNodes[0].textContent=t.links+' ';
+  document.getElementById('sec-content').childNodes[0].textContent=t.content+' ';
+}
+</script>
+</body>
+</html>
