@@ -4,110 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SUPER JUNIOR · E.L.F Fansite</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --blue:#1a4f8a;--blue-mid:#2563a8;--blue-light:#dce8f5;--blue-pale:#eef4fb;
-  --white:#ffffff;--ink:#0d1b2a;--mid:#5a7a9a;--line:#c5d8ee;--accent:#a8c4e0;
-  --paper:#f5f9fe;
-}
-body{font-family:'DM Mono',monospace;background:var(--paper);color:var(--ink);min-height:100vh}
+<link rel="stylesheet" href="style.css">
 
-/* HERO */
-.hero{background:var(--blue);padding:2.5rem 2rem 2rem;position:relative;overflow:hidden}
-.hero::before{content:'슈퍼주니어';font-family:'Cormorant Garamond',serif;font-size:5rem;position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.06);white-space:nowrap;pointer-events:none}
-.hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
-.eyebrow{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
-.title{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:300;line-height:1;color:#fff;letter-spacing:-1px}
-.title span{display:block;font-size:1.1rem;font-style:italic;color:var(--accent);margin-top:.2rem;letter-spacing:0}
-.lang-switch{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
-.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.6);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;padding:4px 10px;cursor:pointer;transition:all .15s}
-.lang-btn.active{background:#fff;color:var(--blue);border-color:#fff}
-.lang-btn:hover:not(.active){border-color:rgba(255,255,255,0.7);color:#fff}
-.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,0.15);padding-top:1.2rem}
-.hs{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,0.15)}
-.hs:last-child{border-right:none}
-.hs-n{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff;font-weight:300}
-.hs-l{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-top:2px}
-
-/* NAV */
-nav{display:flex;overflow-x:auto;background:#fff;border-bottom:2px solid var(--blue);scrollbar-width:none;position:sticky;top:0;z-index:100}
-nav::-webkit-scrollbar{display:none}
-nav a{padding:.7rem 1rem;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--mid);text-decoration:none;border-right:1px solid var(--line);white-space:nowrap;flex-shrink:0;transition:all .15s}
-nav a:hover{background:var(--blue-pale);color:var(--blue)}
-
-/* BODY */
-.body{max-width:760px;margin:0 auto;padding:0 1.2rem}
-.section{padding:2rem 0;border-bottom:1px solid var(--line)}
-.section:last-child{border-bottom:none}
-.sec-label{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--blue-mid);margin-bottom:1.2rem;display:flex;align-items:center;gap:10px}
-.sec-label::after{content:'';flex:1;height:1px;background:var(--line)}
-
-/* BIO */
-.bio-box{background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);padding:1rem 1.2rem;font-size:12px;line-height:1.9;color:#2a3a4a}
-.bio-box.hidden{display:none}
-
-/* LINKS */
-.link-group{margin-bottom:1rem}
-.link-group-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem}
-.link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.link-item{background:#fff;padding:.9rem .8rem;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.6rem;transition:all .15s}
-.link-item:hover{background:var(--blue);color:#fff}
-.link-item:hover .li-sub{color:var(--accent)}
-.li-ic{width:24px;height:24px;background:var(--blue-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;transition:all .15s}
-.link-item:hover .li-ic{background:rgba(255,255,255,0.15)}
-.li-nm{font-size:11px;font-weight:400}
-.li-sub{font-size:9px;color:var(--mid);letter-spacing:1px}
-
-/* SUBUNITS */
-.su-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.su-card{background:#fff;padding:1rem}
-.su-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--blue);margin-bottom:.2rem}
-.su-members{font-size:9px;color:var(--mid);letter-spacing:1px;margin-bottom:.5rem}
-.su-desc{font-size:10px;line-height:1.7;color:#3a4a5a}
-.su-desc.hidden{display:none}
-.su-links{display:flex;gap:4px;margin-top:.6rem;flex-wrap:wrap}
-.su-link{font-size:9px;letter-spacing:1px;padding:2px 7px;border:1px solid var(--line);color:var(--mid);text-decoration:none;transition:all .15s}
-.su-link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-
-/* MEMBERS */
-.member-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-@media(max-width:500px){.member-grid{grid-template-columns:repeat(2,1fr)}}
-.member-card{background:#fff;padding:1rem .8rem}
-.m-top{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
-.m-initial{width:36px;height:36px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:300;flex-shrink:0}
-.m-name{font-size:11px;font-weight:400}
-.m-hangul{font-size:10px;color:var(--mid)}
-.m-role{font-size:9px;color:var(--mid);letter-spacing:1px;margin-bottom:.5rem}
-.m-links{display:flex;gap:3px;flex-wrap:wrap}
-.m-link{font-size:8px;letter-spacing:1px;padding:2px 5px;border:1px solid var(--line);color:var(--mid);text-decoration:none;transition:all .15s}
-.m-link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-
-/* ALBUMS */
-.al-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-@media(max-width:480px){.al-grid{grid-template-columns:repeat(2,1fr)}}
-.al-card{background:#fff;padding:.8rem .7rem}
-.al-yr{font-size:9px;color:var(--mid);letter-spacing:1px}
-.al-name{font-size:11px;line-height:1.3;margin:.2rem 0}
-.al-tag{font-size:9px;color:var(--blue-mid);letter-spacing:1px}
-
-/* MV */
-.mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-@media(max-width:480px){.mv-grid{grid-template-columns:repeat(2,1fr)}}
-.mv-card{background:#fff;text-decoration:none;color:var(--ink);display:block;transition:all .15s}
-.mv-card:hover{background:var(--blue-pale)}
-.mv-thumb{aspect-ratio:16/9;background:var(--blue);display:flex;align-items:center;justify-content:center;position:relative}
-.mv-num{position:absolute;top:5px;left:7px;font-size:8px;letter-spacing:2px;color:var(--accent)}
-.mv-play{width:28px;height:28px;border:1px solid rgba(255,255,255,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center}
-.mv-arrow{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid rgba(255,255,255,0.7);margin-left:2px}
-.mv-info{padding:.6rem .7rem}
-.mv-title{font-size:11px;line-height:1.3;margin-bottom:2px}
-.mv-meta{font-size:9px;color:var(--mid);letter-spacing:1px}
-
-.footer{text-align:center;padding:1.5rem;font-size:9px;color:var(--mid);letter-spacing:2px;background:#fff;border-top:1px solid var(--line)}
-</style>
 </head>
 <body>
 
@@ -133,28 +31,21 @@ nav a:hover{background:var(--blue-pale);color:var(--blue)}
 </div>
 
 <nav>
-  <a href="#about" id="nav-about">关于</a>
   <a href="#links" id="nav-links">官方链接</a>
-  <a href="#subunits" id="nav-sub">小分队</a>
   <a href="#members" id="nav-mem">成员</a>
+  <a href="#subunits" id="nav-sub">小分队</a>
   <a href="#albums" id="nav-al">专辑</a>
   <a href="#mv" id="nav-mv">MV</a>
 </nav>
 
 <div class="body">
 
-  <div class="section" id="about">
-    <div class="sec-label" id="sec-about">关于</div>
-    <div class="bio-box" id="bio-zhs">SUPER JUNIOR（슈퍼주니어）是 SM Entertainment 旗下由 9 名成员组成的韩国男子组合，于 2005 年 11 月 6 日出道，被媒体誉为「韩流之王」。凭借 <em>Sorry, Sorry</em>（2009）风靡全球，出道近 20 年仍持续活跃。粉丝名为 E.L.F（Ever Lasting Friends），应援色为珍珠宝蓝。</div>
-    <div class="bio-box hidden" id="bio-zht">SUPER JUNIOR（슈퍼주니어）是 SM Entertainment 旗下由 9 名成員組成的韓國男子團體，於 2005 年 11 月 6 日出道，被媒體譽為「韓流之王」。憑藉 <em>Sorry, Sorry</em>（2009）風靡全球，出道近 20 年仍持續活躍。粉絲名為 E.L.F（Ever Lasting Friends），應援色為珍珠寶藍。</div>
-    <div class="bio-box hidden" id="bio-en">SUPER JUNIOR is a 9-member South Korean boy group under SM Entertainment, debuting on November 6, 2005. Known as the "Kings of the Hallyu Wave," they rose to global fame with <em>Sorry, Sorry</em> (2009) and remain active after nearly 20 years. Fandom: E.L.F (Ever Lasting Friends). Fan color: Pearl Sapphire Blue.</div>
-    <div class="bio-box hidden" id="bio-ko">SUPER JUNIOR(슈퍼주니어)는 SM 엔터테인먼트 소속 9인조 남자 아이돌 그룹으로, 2005년 11월 6일 데뷔하였습니다. '한류의 왕'이라 불리며 <em>Sorry, Sorry</em>(2009)로 전 세계에 이름을 알렸습니다. 팬덤명: E.L.F. 응원봉 색상: 펄 사파이어 블루.</div>
-  </div>
-
+  <!-- OFFICIAL LINKS -->
   <div class="section" id="links">
     <div class="sec-label" id="sec-links">官方链接</div>
-    <div class="link-group">
-      <div class="link-group-label" id="lgl-group">团队账号</div>
+
+    <div class="lnk-group">
+      <div class="lnk-group-label" id="lgl-team">团队账号</div>
       <div class="link-grid">
         <a class="link-item" href="https://www.youtube.com/channel/UCFipx49muiJ8-d2YsnLlNVw" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">YouTube</div><div class="li-sub">SUPER JUNIOR</div></div></a>
         <a class="link-item" href="https://www.instagram.com/superjunior/" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">Instagram</div><div class="li-sub">@superjunior</div></div></a>
@@ -162,249 +53,366 @@ nav a:hover{background:var(--blue-pale);color:var(--blue)}
         <a class="link-item" href="https://weibo.com/superjunior" target="_blank"><div class="li-ic">微</div><div><div class="li-nm">微博</div><div class="li-sub">SUPER JUNIOR</div></div></a>
       </div>
     </div>
+
+    <div class="lnk-group">
+      <div class="lnk-group-label" id="lgl-platform">官方平台</div>
+      <div class="link-grid">
+        <a class="link-item" href="https://weverse.io/superjunior" target="_blank"><div class="li-ic">W</div><div><div class="li-nm">Weverse</div><div class="li-sub">SUPER JUNIOR</div></div></a>
+        <a class="link-item" href="https://www.smtown.com" target="_blank"><div class="li-ic">SM</div><div><div class="li-nm">SMTOWN</div><div class="li-sub">smtown.com</div></div></a>
+        <a class="link-item" href="https://open.spotify.com/artist/6ptMgTf1bT4Ci7rJMHiMmr" target="_blank"><div class="li-ic">♪</div><div><div class="li-nm">Spotify</div><div class="li-sub">SUPER JUNIOR</div></div></a>
+        <a class="link-item" href="https://music.apple.com/artist/super-junior/255475576" target="_blank"><div class="li-ic">♫</div><div><div class="li-nm">Apple Music</div><div class="li-sub">SUPER JUNIOR</div></div></a>
+      </div>
+    </div>
   </div>
 
+  <!-- MEMBERS -->
+  <div class="section" id="members">
+    <div class="sec-label" id="sec-mem">成员</div>
+    <div class="member-grid">
+
+      <a class="member-card" href="members/leeteuk.html">
+        <div class="m-photo"><span class="m-initial-big">LT</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Leeteuk</div>
+          <div class="m-name-kr">이특</div>
+          <div class="m-name-cn">李特</div>
+          <div class="m-chips">
+            <span class="chip" data-key="leader">队长</span>
+            <span class="chip">MC</span>
+            <span class="chip" data-key="vocal">声乐</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/xxteukxx/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/special1004" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/leeteuk" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/heechul.html">
+        <div class="m-photo"><span class="m-initial-big">HC</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Heechul</div>
+          <div class="m-name-kr">희철</div>
+          <div class="m-name-cn">希澈</div>
+          <div class="m-chips">
+            <span class="chip" data-key="vocal">声乐</span>
+            <span class="chip" data-key="variety">综艺</span>
+            <span class="chip">MC</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/kimheenim/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/Himsenheechul" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/kimheechul" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/yesung.html">
+        <div class="m-photo"><span class="m-initial-big">YS</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Yesung</div>
+          <div class="m-name-kr">예성</div>
+          <div class="m-name-cn">藝聲</div>
+          <div class="m-chips">
+            <span class="chip" data-key="main-vocal">主唱</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/yesung1106/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/shfly3424" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/yesung" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/shindong.html">
+        <div class="m-photo"><span class="m-initial-big">SD</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Shindong</div>
+          <div class="m-name-kr">신동</div>
+          <div class="m-name-cn">神童</div>
+          <div class="m-chips">
+            <span class="chip" data-key="dancer">舞蹈</span>
+            <span class="chip" data-key="variety">综艺</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/shindong.official/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/ShinsFriend" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/shindong" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/eunhyuk.html">
+        <div class="m-photo"><span class="m-initial-big">EH</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Eunhyuk</div>
+          <div class="m-name-kr">은혁</div>
+          <div class="m-name-cn">銀赫</div>
+          <div class="m-chips">
+            <span class="chip" data-key="main-dancer">主舞</span>
+            <span class="chip">Rapper</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/eunhyukee44/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/AllRiseSilver" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/eunhyuk" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/siwon.html">
+        <div class="m-photo"><span class="m-initial-big">SW</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Siwon</div>
+          <div class="m-name-kr">시원</div>
+          <div class="m-name-cn">始源</div>
+          <div class="m-chips">
+            <span class="chip" data-key="visual">门面</span>
+            <span class="chip" data-key="actor">演员</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/siwon407/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/siwon407" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/choisiwon" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/donghae.html">
+        <div class="m-photo"><span class="m-initial-big">DH</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Donghae</div>
+          <div class="m-name-kr">동해</div>
+          <div class="m-name-cn">東海</div>
+          <div class="m-chips">
+            <span class="chip" data-key="dancer">舞蹈</span>
+            <span class="chip" data-key="vocal">声乐</span>
+            <span class="chip" data-key="composer">创作</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/leedonghae/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/donghae861015" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/leedonghae" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/ryeowook.html">
+        <div class="m-photo"><span class="m-initial-big">RW</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Ryeowook</div>
+          <div class="m-name-kr">려욱</div>
+          <div class="m-name-cn">厲旭</div>
+          <div class="m-chips">
+            <span class="chip" data-key="vocal">声乐</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/ryu_wook_official/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/ryeong9" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/ryeowook" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+      <a class="member-card" href="members/kyuhyun.html">
+        <div class="m-photo"><span class="m-initial-big">KH</span></div>
+        <div class="m-info">
+          <div class="m-name-en">Kyuhyun</div>
+          <div class="m-name-kr">규현</div>
+          <div class="m-name-cn">圭賢</div>
+          <div class="m-chips">
+            <span class="chip" data-key="main-vocal">主唱</span>
+            <span class="chip" data-key="solo">个人专辑</span>
+          </div>
+        </div>
+        <div class="m-links-row">
+          <a class="m-link" href="https://www.instagram.com/gyuhyuninstagram/" target="_blank" onclick="event.stopPropagation()">IG</a>
+          <a class="m-link" href="https://x.com/GaemGyu" target="_blank" onclick="event.stopPropagation()">X</a>
+          <a class="m-link" href="https://weibo.com/kyuhyun" target="_blank" onclick="event.stopPropagation()">微博</a>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SUBUNITS -->
   <div class="section" id="subunits">
     <div class="sec-label" id="sec-sub">小分队</div>
     <div class="su-grid">
-      <div class="su-card">
-        <div class="su-name">SJ-K.R.Y.</div>
-        <div class="su-members">규현 · 려욱 · 예성</div>
-        <div class="su-desc" id="sd-kry-zhs">声乐小分队，擅长抒情曲风，多次举办专场演唱会。</div>
-        <div class="su-desc hidden" id="sd-kry-zht">聲樂小分隊，擅長抒情曲風，多次舉辦專場演唱會。</div>
-        <div class="su-desc hidden" id="sd-kry-en">Vocal unit known for emotional ballads and solo concerts.</div>
-        <div class="su-desc hidden" id="sd-kry-ko">감성 발라드를 주로 선보이는 보컬 유닛.</div>
-        <div class="su-links">
-          <a class="su-link" href="https://www.youtube.com/@superjuniorkry" target="_blank">YouTube</a>
-          <a class="su-link" href="https://x.com/SJofficial" target="_blank">X</a>
+
+      <a class="su-card" href="subunits/kry.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">SJ-K.R.Y.</div>
+          <div class="su-members-kr">규현 · 려욱 · 예성</div>
         </div>
-      </div>
-      <div class="su-card">
-        <div class="su-name">SJ-D&amp;E</div>
-        <div class="su-members">동해 · 은혁</div>
-        <div class="su-desc" id="sd-dne-zhs">舞蹈双人组，以强劲舞台和高能舞曲见长。</div>
-        <div class="su-desc hidden" id="sd-dne-zht">舞蹈雙人組，以強勁舞台和高能舞曲見長。</div>
-        <div class="su-desc hidden" id="sd-dne-en">Dance duo known for high-energy performances and sharp choreography.</div>
-        <div class="su-desc hidden" id="sd-dne-ko">강렬한 퍼포먼스가 특징인 댄스 듀오.</div>
-        <div class="su-links">
-          <a class="su-link" href="https://www.instagram.com/superjunior_dne_official/" target="_blank">IG</a>
-          <a class="su-link" href="https://www.youtube.com/@superjuniordne" target="_blank">YouTube</a>
+        <div class="su-foot">
+          <span class="su-lnk" onclick="event.preventDefault();window.open('https://www.youtube.com/@superjuniorkry','_blank')">YT</span>
         </div>
-      </div>
-      <div class="su-card">
-        <div class="su-name">SJ-M</div>
-        <div class="su-members">시원 · 동해 · 은혁 · 려욱</div>
-        <div class="su-desc" id="sd-m-zhs">主打中文市场的子组合，为开拓华语乐坛的先驱 K-pop 团体。</div>
-        <div class="su-desc hidden" id="sd-m-zht">主打中文市場的子組合，為開拓華語樂壇的先驅 K-pop 團體。</div>
-        <div class="su-desc hidden" id="sd-m-en">Mandopop subgroup pioneering K-pop in Chinese-speaking markets.</div>
-        <div class="su-desc hidden" id="sd-m-ko">중화권 시장을 공략하는 서브유닛.</div>
-        <div class="su-links">
-          <a class="su-link" href="https://weibo.com/superjuniorm" target="_blank">微博</a>
+      </a>
+
+      <a class="su-card" href="subunits/dne.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">SJ-D&amp;E</div>
+          <div class="su-members-kr">동해 · 은혁</div>
         </div>
-      </div>
-      <div class="su-card">
-        <div class="su-name">SJ-H &amp; SJ-T</div>
-        <div class="su-members">Happy: 이특·희철·신동·예성·려욱</div>
-        <div class="su-desc" id="sd-ht-zhs">SJ-Happy 主打欢快 K-pop；SJ-T 以 trot 风格为主，老少皆宜。</div>
-        <div class="su-desc hidden" id="sd-ht-zht">SJ-Happy 主打歡快 K-pop；SJ-T 以 trot 風格為主，老少皆宜。</div>
-        <div class="su-desc hidden" id="sd-ht-en">SJ-Happy: upbeat K-pop. SJ-T: trot music for broader audiences.</div>
-        <div class="su-desc hidden" id="sd-ht-ko">SJ-Happy는 신나는 K-pop, SJ-T는 트로트 장르 활동.</div>
-        <div class="su-links">
-          <a class="su-link" href="https://www.youtube.com/channel/UCFipx49muiJ8-d2YsnLlNVw" target="_blank">YouTube</a>
+        <div class="su-foot">
+          <span class="su-lnk" onclick="event.preventDefault();window.open('https://www.instagram.com/superjunior_dne_official/','_blank')">IG</span>
+          <span class="su-lnk" onclick="event.preventDefault();window.open('https://www.youtube.com/@superjuniordne','_blank')">YT</span>
         </div>
-      </div>
+      </a>
+
+      <a class="su-card" href="subunits/m.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">SJ-M</div>
+          <div class="su-members-kr">시원 · 동해<br>은혁 · 려욱</div>
+        </div>
+        <div class="su-foot">
+          <span class="su-lnk" onclick="event.preventDefault();window.open('https://weibo.com/superjuniorm','_blank')">微博</span>
+        </div>
+      </a>
+
+      <a class="su-card" href="subunits/happy.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">SJ-Happy</div>
+          <div class="su-members-kr">이특 · 희철 · 신동<br>예성 · 려욱</div>
+        </div>
+        <div class="su-foot"></div>
+      </a>
+
+      <a class="su-card" href="subunits/t.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">SJ-T</div>
+          <div class="su-members-kr">이특 · 희철 · 신동<br>은혁 · 강인</div>
+        </div>
+        <div class="su-foot"></div>
+      </a>
+
+      <a class="su-card" href="subunits/lss.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">LSS</div>
+          <div class="su-members-kr">이특 · 신동 · 은혁</div>
+        </div>
+        <div class="su-foot"></div>
+      </a>
+
+      <a class="su-card" href="subunits/83z.html">
+        <div class="su-bar"></div>
+        <div class="su-body">
+          <div class="su-name">83Z</div>
+          <div class="su-members-kr">이특 · 희철 · 신동</div>
+        </div>
+        <div class="su-foot"></div>
+      </a>
+
     </div>
   </div>
 
-  <div class="section" id="members">
-    <div class="sec-label" id="sec-mem">现役成员</div>
-    <div class="member-grid">
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">LT</div><div><div class="m-name">Leeteuk</div><div class="m-hangul">이특 · 李特</div></div></div>
-        <div class="m-role" id="mr-lt">队长 · 主持人 · 声乐</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/xxteukxx/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/special1004" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/leeteuk" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">HC</div><div><div class="m-name">Heechul</div><div class="m-hangul">희철 · 希澈</div></div></div>
-        <div class="m-role" id="mr-hc">声乐 · 综艺 · 主持人</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/kimheenim/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/Himsenheechul" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/kimheechul" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">YS</div><div><div class="m-name">Yesung</div><div class="m-hangul">예성 · 藝聲</div></div></div>
-        <div class="m-role" id="mr-ys">主唱</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/yesung1106/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/shfly3424" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/yesung" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">SD</div><div><div class="m-name">Shindong</div><div class="m-hangul">신동 · 神童</div></div></div>
-        <div class="m-role" id="mr-sd">舞蹈 · 综艺</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/shindong.official/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/ShinsFriend" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/shindong" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">EH</div><div><div class="m-name">Eunhyuk</div><div class="m-hangul">은혁 · 銀赫</div></div></div>
-        <div class="m-role" id="mr-eh">主舞 · Rapper</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/eunhyukee44/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/AllRiseSilver" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/eunhyuk" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">SW</div><div><div class="m-name">Siwon</div><div class="m-hangul">시원 · 始源</div></div></div>
-        <div class="m-role" id="mr-sw">门面 · 演员</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/siwon407/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/siwon407" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/choisiwon" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">DH</div><div><div class="m-name">Donghae</div><div class="m-hangul">동해 · 東海</div></div></div>
-        <div class="m-role" id="mr-dh">舞蹈 · 声乐 · 创作</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/leedonghae/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/donghae861015" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/leedonghae" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">RW</div><div><div class="m-name">Ryeowook</div><div class="m-hangul">려욱 · 厲旭</div></div></div>
-        <div class="m-role" id="mr-rw">声乐</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/ryu_wook_official/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/ryeong9" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/ryeowook" target="_blank">微博</a>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="m-top"><div class="m-initial">KH</div><div><div class="m-name">Kyuhyun</div><div class="m-hangul">규현 · 圭賢</div></div></div>
-        <div class="m-role" id="mr-kh">主唱 · 个人专辑</div>
-        <div class="m-links">
-          <a class="m-link" href="https://www.instagram.com/gyuhyuninstagram/" target="_blank">IG</a>
-          <a class="m-link" href="https://x.com/GaemGyu" target="_blank">X</a>
-          <a class="m-link" href="https://weibo.com/kyuhyun" target="_blank">微博</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- ALBUMS -->
   <div class="section" id="albums">
-    <div class="sec-label" id="sec-al">代表专辑</div>
+    <div class="sec-label" id="sec-al">专辑</div>
     <div class="al-grid">
+      <div class="al-card"><div class="al-yr">2005</div><div class="al-name">SUPER JUNIOR 05</div><div class="al-tag">1ST</div></div>
+      <div class="al-card"><div class="al-yr">2007</div><div class="al-name">Don't Don</div><div class="al-tag">2ND</div></div>
       <div class="al-card"><div class="al-yr">2009</div><div class="al-name">Sorry, Sorry</div><div class="al-tag">3RD</div></div>
       <div class="al-card"><div class="al-yr">2010</div><div class="al-name">Bonamana</div><div class="al-tag">4TH</div></div>
       <div class="al-card"><div class="al-yr">2011</div><div class="al-name">Mr. Simple</div><div class="al-tag">5TH</div></div>
+      <div class="al-card"><div class="al-yr">2012</div><div class="al-name">Sexy, Free &amp; Single</div><div class="al-tag">6TH</div></div>
       <div class="al-card"><div class="al-yr">2014</div><div class="al-name">Mamacita</div><div class="al-tag">7TH</div></div>
       <div class="al-card"><div class="al-yr">2017</div><div class="al-name">Play</div><div class="al-tag">8TH</div></div>
       <div class="al-card"><div class="al-yr">2019</div><div class="al-name">Time_Slip</div><div class="al-tag">9TH</div></div>
-      <div class="al-card"><div class="al-yr">2021</div><div class="al-name">The Renaissance</div><div class="al-tag">11TH</div></div>
+      <div class="al-card"><div class="al-yr">2020</div><div class="al-name">The Renaissance</div><div class="al-tag">10TH</div></div>
+      <div class="al-card"><div class="al-yr">2022</div><div class="al-name">The Road: Keep Going</div><div class="al-tag">11TH</div></div>
       <div class="al-card"><div class="al-yr">2025</div><div class="al-name">Super Junior 25</div><div class="al-tag">12TH</div></div>
     </div>
   </div>
 
+  <!-- MV -->
   <div class="section" id="mv">
-    <div class="sec-label" id="sec-mv">必看 MV</div>
+    <div class="sec-label" id="sec-mv">MV</div>
     <div class="mv-grid">
       <a class="mv-card" href="https://youtu.be/OPQH1aByFvI" target="_blank">
         <div class="mv-thumb"><div class="mv-num">01</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Sorry, Sorry</div><div class="mv-meta">2009</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/r8vnJXEJSaY" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">02</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Mr. Simple</div><div class="mv-meta">2011</div></div>
+        <div class="mv-info"><div class="mv-title">Sorry, Sorry</div><div class="mv-meta">2009 · 3RD ALBUM</div></div>
       </a>
       <a class="mv-card" href="https://youtu.be/G9Mgs-q5nqE" target="_blank">
+        <div class="mv-thumb"><div class="mv-num">02</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
+        <div class="mv-info"><div class="mv-title">Bonamana</div><div class="mv-meta">2010 · 4TH ALBUM</div></div>
+      </a>
+      <a class="mv-card" href="https://youtu.be/r8vnJXEJSaY" target="_blank">
         <div class="mv-thumb"><div class="mv-num">03</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Bonamana</div><div class="mv-meta">2010</div></div>
+        <div class="mv-info"><div class="mv-title">Mr. Simple</div><div class="mv-meta">2011 · 5TH ALBUM</div></div>
       </a>
       <a class="mv-card" href="https://youtu.be/0v5K9BQ-DYI" target="_blank">
         <div class="mv-thumb"><div class="mv-num">04</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Mamacita</div><div class="mv-meta">2014</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/pykdDgWX7-M" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">05</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Express Mode</div><div class="mv-meta">2024</div></div>
+        <div class="mv-info"><div class="mv-title">Mamacita</div><div class="mv-meta">2014 · 7TH ALBUM</div></div>
       </a>
       <a class="mv-card" href="https://youtu.be/7b2bAWMQY2M" target="_blank">
+        <div class="mv-thumb"><div class="mv-num">05</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
+        <div class="mv-info"><div class="mv-title">Black Suit</div><div class="mv-meta">2017 · 8TH ALBUM</div></div>
+      </a>
+      <a class="mv-card" href="https://youtu.be/pykdDgWX7-M" target="_blank">
         <div class="mv-thumb"><div class="mv-num">06</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Black Suit</div><div class="mv-meta">2017</div></div>
+        <div class="mv-info"><div class="mv-title">Express Mode</div><div class="mv-meta">2024 · LATEST</div></div>
       </a>
     </div>
   </div>
 
 </div>
+
 <div class="footer">💙 Pearl Sapphire Blue Forever &nbsp;·&nbsp; E.L.F &nbsp;·&nbsp; 2005~</div>
 
 <script>
-const lang={
+const T={
   'zh-s':{
-    'lb-debut':'出道年份','lb-members':'现役成员','lb-albums':'正规专辑','lb-fans':'粉丝名称',
-    'nav-about':'关于','nav-links':'官方链接','nav-sub':'小分队','nav-mem':'成员','nav-al':'专辑','nav-mv':'MV',
-    'sec-about':'关于','sec-links':'官方链接','sec-sub':'小分队','sec-mem':'现役成员','sec-al':'代表专辑','sec-mv':'必看 MV',
-    'lgl-group':'团队账号',
-    'mr-lt':'队长 · 主持人 · 声乐','mr-hc':'声乐 · 综艺 · 主持人','mr-ys':'主唱',
-    'mr-sd':'舞蹈 · 综艺','mr-eh':'主舞 · Rapper','mr-sw':'门面 · 演员',
-    'mr-dh':'舞蹈 · 声乐 · 创作','mr-rw':'声乐','mr-kh':'主唱 · 个人专辑'
+    debut:'出道年份',members:'现役成员',albums:'正规专辑',fans:'粉丝名称',
+    links:'官方链接',mem:'成员',sub:'小分队',al:'专辑',mv:'MV',
+    team:'团队账号',platform:'官方平台',
+    leader:'队长',vocal:'声乐',variety:'综艺',dancer:'舞蹈',
+    'main-vocal':'主唱','main-dancer':'主舞',visual:'门面',actor:'演员',composer:'创作',solo:'个人专辑'
   },
   'zh-t':{
-    'lb-debut':'出道年份','lb-members':'現役成員','lb-albums':'正規專輯','lb-fans':'粉絲名稱',
-    'nav-about':'關於','nav-links':'官方連結','nav-sub':'小分隊','nav-mem':'成員','nav-al':'專輯','nav-mv':'MV',
-    'sec-about':'關於','sec-links':'官方連結','sec-sub':'小分隊','sec-mem':'現役成員','sec-al':'代表專輯','sec-mv':'必看 MV',
-    'lgl-group':'團隊帳號',
-    'mr-lt':'隊長 · 主持人 · 聲樂','mr-hc':'聲樂 · 綜藝 · 主持人','mr-ys':'主唱',
-    'mr-sd':'舞蹈 · 綜藝','mr-eh':'主舞 · Rapper','mr-sw':'門面 · 演員',
-    'mr-dh':'舞蹈 · 聲樂 · 創作','mr-rw':'聲樂','mr-kh':'主唱 · 個人專輯'
+    debut:'出道年份',members:'現役成員',albums:'正規專輯',fans:'粉絲名稱',
+    links:'官方連結',mem:'成員',sub:'小分隊',al:'專輯',mv:'MV',
+    team:'團隊帳號',platform:'官方平台',
+    leader:'隊長',vocal:'聲樂',variety:'綜藝',dancer:'舞蹈',
+    'main-vocal':'主唱','main-dancer':'主舞',visual:'門面',actor:'演員',composer:'創作',solo:'個人專輯'
   },
   'en':{
-    'lb-debut':'Debut Year','lb-members':'Active Members','lb-albums':'Studio Albums','lb-fans':'Fandom Name',
-    'nav-about':'About','nav-links':'Links','nav-sub':'Sub-units','nav-mem':'Members','nav-al':'Albums','nav-mv':'MVs',
-    'sec-about':'About','sec-links':'Official Links','sec-sub':'Sub-units','sec-mem':'Active Members','sec-al':'Key Albums','sec-mv':'Must-Watch MVs',
-    'lgl-group':'Group Accounts',
-    'mr-lt':'Leader · MC · Vocals','mr-hc':'Vocals · Variety · MC','mr-ys':'Main Vocalist',
-    'mr-sd':'Dancer · Variety','mr-eh':'Main Dancer · Rapper','mr-sw':'Visual · Actor',
-    'mr-dh':'Dancer · Vocals · Composer','mr-rw':'Vocalist','mr-kh':'Main Vocalist · Solo'
+    debut:'Debut Year',members:'Active Members',albums:'Studio Albums',fans:'Fandom Name',
+    links:'Official Links',mem:'Members',sub:'Sub-units',al:'Albums',mv:'MVs',
+    team:'Group Accounts',platform:'Official Platforms',
+    leader:'Leader',vocal:'Vocals',variety:'Variety',dancer:'Dancer',
+    'main-vocal':'Main Vocal','main-dancer':'Main Dancer',visual:'Visual',actor:'Actor',composer:'Composer',solo:'Solo'
   },
   'ko':{
-    'lb-debut':'데뷔 연도','lb-members':'현재 멤버','lb-albums':'정규 앨범','lb-fans':'팬덤명',
-    'nav-about':'소개','nav-links':'공식 링크','nav-sub':'서브유닛','nav-mem':'멤버','nav-al':'앨범','nav-mv':'MV',
-    'sec-about':'소개','sec-links':'공식 링크','sec-sub':'서브유닛','sec-mem':'현재 멤버','sec-al':'대표 앨범','sec-mv':'추천 MV',
-    'lgl-group':'그룹 계정',
-    'mr-lt':'리더 · MC · 보컬','mr-hc':'보컬 · 예능 · MC','mr-ys':'메인 보컬',
-    'mr-sd':'댄서 · 예능','mr-eh':'메인 댄서 · 래퍼','mr-sw':'비주얼 · 배우',
-    'mr-dh':'댄서 · 보컬 · 작사','mr-rw':'보컬','mr-kh':'메인 보컬 · 솔로'
+    debut:'데뷔 연도',members:'현재 멤버',albums:'정규 앨범',fans:'팬덤명',
+    links:'공식 링크',mem:'멤버',sub:'서브유닛',al:'앨범',mv:'MV',
+    team:'그룹 계정',platform:'공식 플랫폼',
+    leader:'리더',vocal:'보컬',variety:'예능',dancer:'댄서',
+    'main-vocal':'메인 보컬','main-dancer':'메인 댄서',visual:'비주얼',actor:'배우',composer:'작곡',solo:'솔로'
   }
-};
-const bioMap={'zh-s':'bio-zhs','zh-t':'bio-zht','en':'bio-en','ko':'bio-ko'};
-const suMap={
-  'zh-s':['sd-kry-zhs','sd-dne-zhs','sd-m-zhs','sd-ht-zhs'],
-  'zh-t':['sd-kry-zht','sd-dne-zht','sd-m-zht','sd-ht-zht'],
-  'en':['sd-kry-en','sd-dne-en','sd-m-en','sd-ht-en'],
-  'ko':['sd-kry-ko','sd-dne-ko','sd-m-ko','sd-ht-ko']
 };
 function setLang(l,btn){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  const d=lang[l]||lang['zh-s'];
-  Object.entries(d).forEach(([id,txt])=>{const el=document.getElementById(id);if(el)el.textContent=txt});
-  Object.values(bioMap).forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden')});
-  const bioEl=document.getElementById(bioMap[l]);if(bioEl)bioEl.classList.remove('hidden');
-  ['zh-s','zh-t','en','ko'].forEach(lang2=>{(suMap[lang2]||[]).forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('hidden')})});
-  (suMap[l]||[]).forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('hidden')});
+  const t=T[l]||T['zh-s'];
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
+  set('lb-debut',t.debut);set('lb-members',t.members);set('lb-albums',t.albums);set('lb-fans',t.fans);
+  set('nav-links',t.links);set('nav-mem',t.mem);set('nav-sub',t.sub);set('nav-al',t.al);set('nav-mv',t.mv);
+  set('lgl-team',t.team);set('lgl-platform',t.platform);
+  [['sec-links',t.links],['sec-mem',t.mem],['sec-sub',t.sub],['sec-al',t.al],['sec-mv',t.mv]].forEach(([id,v])=>{
+    const el=document.getElementById(id);if(el&&el.firstChild)el.firstChild.textContent=v+' ';
+  });
+  document.querySelectorAll('.chip[data-key]').forEach(c=>{
+    const k=c.getAttribute('data-key');if(t[k])c.textContent=t[k];
+  });
 }
 </script>
 </body>
