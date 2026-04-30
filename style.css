@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&display=swap');
 
 /* ══════════════════════════════════════════
    TOKENS  — Pearl Sapphire Blue + White
@@ -30,7 +30,7 @@
 
 /* ══ BASE ══ */
 body{
-  font-family:'DM Mono',monospace;
+  font-family:Arial,sans-serif;
   background:var(--blue-wash);
   color:var(--ink);
   min-height:100vh;
@@ -50,7 +50,7 @@ body{
 /* watermark text */
 .hero::before{
   content:'슈퍼주니어';
-  font-family:'Cormorant Garamond',serif;
+  font-family:Arial,sans-serif;
   font-size:6rem;
   position:absolute;
   right:-20px;
@@ -79,7 +79,7 @@ body{
 .eyebrow a{color:var(--on-dark);text-decoration:none}
 .eyebrow a:hover{color:var(--on-dark-hi)}
 .title{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Playfair Display',serif;font-style:italic;
   font-size:3.4rem;
   font-weight:300;
   line-height:1;
@@ -105,10 +105,10 @@ body{
 .hs{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,0.12)}
 .hs:last-child{border-right:none}
 .hs-n{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.7rem;
+  font-family:Arial,sans-serif;
+  font-size:1.4rem;
   color:var(--white);
-  font-weight:300;
+  font-weight:400;
   line-height:1;
 }
 .hs-l{
@@ -127,7 +127,7 @@ body{
   background:transparent;
   border:1px solid rgba(255,255,255,0.25);
   color:rgba(255,255,255,0.55);
-  font-family:'DM Mono',monospace;
+  font-family:Arial,sans-serif;
   font-size:9px;
   letter-spacing:2px;
   padding:4px 10px;
@@ -295,7 +295,7 @@ nav a:hover,nav a.active{
 .su-bar{height:3px;background:var(--blue)}
 .su-body{padding:.9rem 1rem;flex:1}
 .su-name{
-  font-family:'Cormorant Garamond',serif;
+  font-family:'Playfair Display',serif;font-style:italic;
   font-size:1.15rem;font-weight:300;color:var(--blue);
 }
 .su-card:hover .su-name{color:var(--blue-deep)}
