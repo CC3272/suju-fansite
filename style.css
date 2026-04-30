@@ -307,9 +307,11 @@ nav a:hover,nav a.active{
 }
 
 .m-info{padding:.8rem .9rem}
-.m-name-en{font-size:12px;font-weight:400;color:var(--ink)}
-.m-name-kr{font-size:9px;color:var(--ink-light);letter-spacing:1px;margin-top:2px}
-.m-name-cn{font-size:9px;color:var(--ink-light);margin-top:1px}
+.m-name-en{font-size:12px;font-weight:400;color:var(--ink);letter-spacing:1px;text-transform:uppercase}
+.m-name-sub{display:flex;align-items:center;gap:5px;margin-top:3px}
+.m-kr{font-size:9px;color:var(--ink-light);letter-spacing:1px}
+.m-cn{font-size:9px;color:var(--ink-light)}
+.m-kr::after{content:"·";margin-left:5px;color:var(--blue-mist)}
 
 .m-chips{display:flex;flex-wrap:wrap;gap:3px;margin-top:.5rem}
 .chip{
@@ -414,7 +416,7 @@ nav a:hover,nav a.active{
 /* ══════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════ */
-@media(max-width:500px){
+@media(max-width:600px){
   .member-grid{grid-template-columns:repeat(2,1fr)}
   .name-grid{grid-template-columns:repeat(2,1fr)}
   .al-grid{grid-template-columns:repeat(2,1fr)}
