@@ -5,14 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eunhyuk · SUPER JUNIOR</title>
 <link rel="stylesheet" href="../style.css">
+<style>
+.al-group{margin-bottom:1.2rem}
+.al-group-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--ink-light);margin-bottom:.5rem}
+.al-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1px;background:var(--blue-mist);border:1px solid var(--blue-mist)}
+.al-card{background:var(--white);padding:.8rem .7rem}
+.al-yr{font-size:9px;color:var(--ink-light);letter-spacing:1px}
+.al-name{font-size:11px;line-height:1.3;margin:.2rem 0;color:var(--ink)}
+.al-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.al-tag{font-size:7px;color:var(--white);letter-spacing:1px;background:var(--blue);display:inline-block;padding:1px 5px}
+.al-tag.single{background:var(--blue-soft,#3a7fcf)}
+.al-note{font-size:10px;color:var(--ink-light);line-height:1.7;padding:.8rem 0;border-bottom:1px solid var(--blue-pale);margin-bottom:1rem}
+.al-note a{color:var(--blue);text-decoration:none}
+.al-note a:hover{text-decoration:underline}
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--blue-pale)}
+.tl-item:last-child{border-bottom:none}
+.tl-date{font-size:9px;letter-spacing:1px;color:var(--blue);white-space:nowrap;min-width:80px;padding-top:2px}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:4px}
+.tl-content{font-size:11px;color:var(--ink);line-height:1.6}
+.tl-tag{display:inline-block;font-size:8px;letter-spacing:1px;padding:1px 6px;background:var(--blue-pale);color:var(--blue);margin-top:3px}
+</style>
 </head>
 <body>
 
 <div class="hero">
   <div class="hero-top">
     <div>
-      <div class="eyebrow"><a href="../index.html" style="color:var(--accent);text-decoration:none">← SUPER JUNIOR</a></div>
-      <div class="title">Eunhyuk<span>은혁 · 銀赫</span></div>
+      <div class="eyebrow"><a href="../index.html" style="color:var(--on-dark);text-decoration:none">← SUPER JUNIOR</a></div>
+      <div class="title">Eunhyuk<span>은혁 · 银赫 · 李赫宰</span></div>
     </div>
     <div class="lang-switch">
       <button class="lang-btn active" onclick="setLang('zh-s',this)">简中</button>
@@ -22,31 +43,70 @@
       <button class="lang-btn" onclick="setLang('ja',this)">日本語</button>
     </div>
   </div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-n">1986</div><div class="hs-l" id="lb-birth">出生年份</div></div>
+    <div class="hs"><div class="hs-n">2005</div><div class="hs-l" id="lb-debut">出道年份</div></div>
+    <div class="hs"><div class="hs-n">主舞</div><div class="hs-l" id="lb-pos">位置</div></div>
+    <div class="hs"><div class="hs-n">Jewel</div><div class="hs-l" id="lb-fans">粉丝名</div></div>
+  </div>
 </div>
 
 <nav>
-  <a href="../index.html#links" id="nav-links">官方链接</a>
-  <a href="../index.html#members" id="nav-mem">成员</a>
+  <a href="#links" id="nav-links">社媒链接</a>
+  <a href="#albums" id="nav-al">专辑</a>
+  <a href="#schedule" id="nav-sch">近期行程</a>
   <a href="../index.html#subunits" id="nav-sub">小分队</a>
-  <a href="../index.html#albums" id="nav-al">专辑</a>
-  <a href="../index.html#mv" id="nav-mv">MV</a>
+  <a href="../index.html" id="nav-back">← 主页</a>
 </nav>
 
 <div class="body">
 
-  <div class="section">
-    <div class="sec-label" id="sec-links">个人链接</div>
-    <div class="link-grid">
-      
-      <a class="link-item" href="https://www.instagram.com/eunhyukee44/" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">Instagram</div><div class="li-sub">@eunhyukee44</div></div></a>
-      <a class="link-item" href="https://x.com/AllRiseSilver" target="_blank"><div class="li-ic">✕</div><div><div class="li-nm">Twitter / X</div><div class="li-sub">@AllRiseSilver</div></div></a>
-      <a class="link-item" href="https://weibo.com/eunhyuk" target="_blank"><div class="li-ic">微</div><div><div class="li-nm">微博</div><div class="li-sub">Eunhyuk</div></div></a>
+  <!-- 社媒链接 -->
+  <div class="section" id="links">
+    <div class="sec-label" id="sec-links">社媒链接</div>
+
+    <div class="lnk-group">
+      <div class="lnk-group-label" id="lgl-dne">D&amp;E 官方平台</div>
+      <div class="link-grid">
+        <a class="link-item" href="https://www.instagram.com/superjunior_dne_official/" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">Instagram</div><div class="li-sub">@superjunior_dne_official</div></div></a>
+        <a class="link-item" href="https://x.com/SJ_DnE_official" target="_blank"><div class="li-ic">✕</div><div><div class="li-nm">Twitter (KR)</div><div class="li-sub">@SJ_DnE_official</div></div></a>
+        <a class="link-item" href="https://x.com/SJ_DnE_JP" target="_blank"><div class="li-ic">✕</div><div><div class="li-nm">Twitter (JP)</div><div class="li-sub">@SJ_DnE_JP</div></div></a>
+        <a class="link-item" href="https://www.youtube.com/@SUPERJUNIORDnE" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">YouTube</div><div class="li-sub">D&amp;E Official</div></div></a>
+        <a class="link-item" href="https://fromm.my/vWgfSK" target="_blank"><div class="li-ic">F</div><div><div class="li-nm">fromm</div><div class="li-sub">D&amp;E Official</div></div></a>
+        <a class="link-item" href="https://superjunior-dne.jp/" target="_blank"><div class="li-ic">JP</div><div><div class="li-nm">日本官咖</div><div class="li-sub">superjunior-dne.jp</div></div></a>
+      </div>
+    </div>
+
+    <div class="lnk-group">
+      <div class="lnk-group-label" id="lgl-personal">个人平台</div>
+      <div class="link-grid">
+        <a class="link-item" href="https://x.com/AllRiseSilver" target="_blank"><div class="li-ic">✕</div><div><div class="li-nm">Twitter</div><div class="li-sub">@AllRiseSilver</div></div></a>
+        <a class="link-item" href="https://www.instagram.com/eunhyukee44/" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">Instagram</div><div class="li-sub">@eunhyukee44</div></div></a>
+        <a class="link-item" href="https://www.youtube.com/@1ldaneunhyuk" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">YouTube</div><div class="li-sub">일단은혁이</div></div></a>
+      </div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="sec-label" id="sec-content">内容</div>
-    <div class="placeholder" id="ph-text">// 待添加内容 · Content coming soon</div>
+  <!-- 专辑 -->
+  <div class="section" id="albums">
+    <div class="sec-label" id="sec-al">专辑</div>
+    <p class="al-note" id="al-note">以下仅收录个人 Solo 作品。Super Junior 团体专辑请至 <a href="../index.html#albums">主页专辑栏目</a>；小分队作品请至 <a href="../subunits/dne.html#albums">SJ-D&amp;E 专页</a>。</p>
+    <div class="al-grid">
+      <div class="al-card"><div class="al-yr">2021</div><div class="al-name">Be</div><div class="al-tags"><span class="al-tag single">单曲</span></div></div>
+      <div class="al-card"><div class="al-yr">2025.01.27</div><div class="al-name">EXPLORER</div><div class="al-tags"><span class="al-tag">1ST EP</span></div></div>
+    </div>
+  </div>
+
+  <!-- 近期行程 -->
+  <div class="section" id="schedule">
+    <div class="sec-label" id="sec-sch">近期行程</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">待添加</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">活动名称<br><span class="tl-tag">类型</span></div>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -54,22 +114,28 @@
 
 <script>
 const T={
-  'zh-s':{links:'个人链接',mem:'成员',sub:'小分队',al:'专辑',mv:'MV',content:'内容'},
-  'zh-t':{links:'個人連結',mem:'成員',sub:'小分隊',al:'專輯',mv:'MV',content:'內容'},
-  'en':{links:'Personal Links',mem:'Members',sub:'Sub-units',al:'Albums',mv:'MVs',content:'Content'},
-  'ko':{links:'개인 링크',mem:'멤버',sub:'서브유닛',al:'앨범',mv:'MV',content:'콘텐츠'}
+  'zh-s':{birth:'出生年份',debut:'出道年份',pos:'主舞',fans:'粉丝名',links:'社媒链接',al:'专辑',sch:'近期行程',sub:'小分队',back:'← 主页',dne:'D&E 官方平台',personal:'个人平台',
+    note:'以下仅收录个人 Solo 作品。Super Junior 团体专辑请至 主页专辑栏目；小分队作品请至 SJ-D&E 专页。'},
+  'zh-t':{birth:'出生年份',debut:'出道年份',pos:'主舞',fans:'粉絲名',links:'社媒連結',al:'專輯',sch:'近期行程',sub:'小分隊',back:'← 主頁',dne:'D&E 官方平台',personal:'個人平台',
+    note:'以下僅收錄個人 Solo 作品。Super Junior 團體專輯請至 主頁專輯欄目；小分隊作品請至 SJ-D&E 專頁。'},
+  'en':{birth:'Birth Year',debut:'Debut Year',pos:'Main Dancer',fans:'Fandom',links:'Social Links',al:'Albums',sch:'Schedule',sub:'Sub-units',back:'← Home',dne:'D&E Official',personal:'Personal',
+    note:'Solo works only. For Super Junior group albums see the main page; for subunit works see the SJ-D&E page.'},
+  'ko':{birth:'출생연도',debut:'데뷔 연도',pos:'메인 댄서',fans:'팬덤명',links:'소셜 링크',al:'앨범',sch:'일정',sub:'서브유닛',back:'← 홈',dne:'D&E 공식',personal:'개인',
+    note:'솔로 작품만 수록합니다. 슈퍼주니어 앨범은 메인 페이지를, 유닛 작품은 SJ-D&E 페이지를 참조하세요.'},
+  'ja':{birth:'生まれ年',debut:'デビュー年',pos:'メインダンサー',fans:'ファン名',links:'SNSリンク',al:'アルバム',sch:'スケジュール',sub:'ユニット',back:'← ホーム',dne:'D&E 公式',personal:'個人',
+    note:'ソロ作品のみ掲載。Super Juniorのアルバムはメインページ、ユニット作品はSJ-D&Eページをご覧ください。'}
 };
 function setLang(l,btn){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   const t=T[l]||T['zh-s'];
-  document.getElementById('nav-links').textContent=t.links;
-  document.getElementById('nav-mem').textContent=t.mem;
-  document.getElementById('nav-sub').textContent=t.sub;
-  document.getElementById('nav-al').textContent=t.al;
-  document.getElementById('nav-mv').textContent=t.mv;
-  document.getElementById('sec-links').childNodes[0].textContent=t.links+' ';
-  document.getElementById('sec-content').childNodes[0].textContent=t.content+' ';
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
+  set('lb-birth',t.birth);set('lb-debut',t.debut);set('lb-pos',t.pos);set('lb-fans',t.fans);
+  set('nav-links',t.links);set('nav-al',t.al);set('nav-sch',t.sch);set('nav-sub',t.sub);set('nav-back',t.back);
+  set('lgl-dne',t.dne);set('lgl-personal',t.personal);
+  [['sec-links',t.links],['sec-al',t.al],['sec-sch',t.sch]].forEach(([id,v])=>{
+    const el=document.getElementById(id);if(el&&el.firstChild)el.firstChild.textContent=v+' ';
+  });
 }
 </script>
 </body>
