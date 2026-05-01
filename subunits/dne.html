@@ -38,6 +38,7 @@
       <button class="lang-btn" onclick="setLang('zh-t',this)">繁中</button>
       <button class="lang-btn" onclick="setLang('en',this)">EN</button>
       <button class="lang-btn" onclick="setLang('ko',this)">한국어</button>
+      <button class="lang-btn" onclick="setLang('ja',this)">日本語</button>
     </div>
   </div>
   <div class="hero-stats">
@@ -151,6 +152,7 @@ const T={
   'zh-s':{mem:'成员',debut:'出道年份',ep:'迷你专辑',jpal:'日本专辑',mem_nav:'成员',links:'团队链接',al:'专辑',sch:'近期行程',back:'← 主页',team:'团队账号',show:'节目频道',platform:'官方平台',kr:'韩国',jp:'日本'},
   'zh-t':{mem:'成員',debut:'出道年份',ep:'迷你專輯',jpal:'日本專輯',mem_nav:'成員',links:'團隊連結',al:'專輯',sch:'近期行程',back:'← 主頁',team:'團隊帳號',show:'節目頻道',platform:'官方平台',kr:'韓國',jp:'日本'},
   'en':{mem:'Members',debut:'Debut Year',ep:'Mini Albums',jpal:'JP Albums',mem_nav:'Members',links:'Team Links',al:'Albums',sch:'Schedule',back:'← Home',team:'Group Accounts',show:'Show Channel',platform:'Official Platforms',kr:'Korean',jp:'Japanese'},
+  'ja':{mem:'メンバー',debut:'デビュー年',ep:'ミニアルバム',jpal:'日本盤',mem_nav:'メンバー',links:'公式リンク',al:'ディスコグラフィー',sch:'スケジュール',back:'← ホーム',team:'グループアカウント',show:'番組チャンネル',platform:'公式プラットフォーム',kr:'韓国',jp:'日本'},
   'ko':{mem:'멤버',debut:'데뷔 연도',ep:'미니앨범',jpal:'일본앨범',mem_nav:'멤버',links:'팀 링크',al:'앨범',sch:'일정',back:'← 홈',team:'그룹 계정',show:'방송 채널',platform:'공식 플랫폼',kr:'한국',jp:'일본'}
 };
 function setLang(l,btn){
@@ -165,7 +167,7 @@ function setLang(l,btn){
   [['sec-mem',t.mem],['sec-links',t.links],['sec-al',t.al],['sec-sch',t.sch]].forEach(([id,v])=>{
     const el=document.getElementById(id);if(el&&el.firstChild)el.firstChild.textContent=v+' ';
   });
-  const langClass={'zh-s':'zhs','zh-t':'zht','en':'eng','ko':'kor'};
+  const langClass={'zh-s':'zhs','zh-t':'zht','en':'eng','ko':'kor','ja':'kor'};
   const show=langClass[l]||'zhs';
   document.querySelectorAll('.li-sub.zhs,.li-sub.zht,.li-sub.eng,.li-sub.kor').forEach(el=>{
     el.style.display=el.classList.contains(show)?'':'none';
