@@ -6,12 +6,22 @@
 <title>SJ-D&amp;E · SUPER JUNIOR</title>
 <link rel="stylesheet" href="../style.css">
 <style>
+.al-group{margin-bottom:1.2rem}
+.al-group-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--ink-light);margin-bottom:.5rem}
+.al-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:1px;background:var(--blue-mist);border:1px solid var(--blue-mist)}
+.al-card{background:var(--white);padding:.8rem .7rem}
+.al-yr{font-size:9px;color:var(--ink-light);letter-spacing:1px}
+.al-name{font-size:11px;line-height:1.3;margin:.2rem 0;color:var(--ink)}
+.al-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+.al-tag{font-size:7px;color:var(--white);letter-spacing:1px;background:var(--blue);display:inline-block;padding:1px 5px}
+.al-tag.single{background:var(--blue-soft,#3a7fcf)}
+
 .timeline{display:flex;flex-direction:column;gap:0}
 .tl-item{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--blue-pale)}
 .tl-item:last-child{border-bottom:none}
-.tl-date{font-size:9px;letter-spacing:1px;color:var(--blue);white-space:nowrap;min-width:80px;padding-top:2px;font-family:Arial,sans-serif}
+.tl-date{font-size:9px;letter-spacing:1px;color:var(--blue);white-space:nowrap;min-width:80px;padding-top:2px}
 .tl-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:4px}
-.tl-content{font-size:11px;color:var(--ink);line-height:1.6;font-family:Arial,sans-serif}
+.tl-content{font-size:11px;color:var(--ink);line-height:1.6}
 .tl-tag{display:inline-block;font-size:8px;letter-spacing:1px;padding:1px 6px;background:var(--blue-pale);color:var(--blue);margin-top:3px}
 </style>
 </head>
@@ -74,16 +84,16 @@
     <div class="lnk-group">
       <div class="lnk-group-label" id="lgl-show">节目频道</div>
       <div class="link-grid">
-        <a class="link-item" href="https://m.youtube.com/@iamdongbaek" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">동백이다 YouTube</div><div class="li-sub">@iamdongbaek</div></div></a>
-        <a class="link-item" href="待补充" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">동백이다 Instagram</div><div class="li-sub">待补充</div></div></a>
+        <a class="link-item" href="https://m.youtube.com/@iamdongbaek" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm zhs">东白 YouTube</div><div class="li-nm zht" style="display:none">東白 YouTube</div><div class="li-nm eng" style="display:none">Dongbaek YouTube</div><div class="li-nm kor" style="display:none">동백 YouTube</div><div class="li-sub">@iamdongbaek</div></div></a>
+        <a class="link-item" href="https://www.instagram.com/iamdongbaek_official?igsh=MWNwMTNobnV5aHN5eA==" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm zhs">东白 Instagram</div><div class="li-nm zht" style="display:none">東白 Instagram</div><div class="li-nm eng" style="display:none">Dongbaek Instagram</div><div class="li-nm kor" style="display:none">동백 Instagram</div><div class="li-sub">@iamdongbaek_official</div></div></a>
       </div>
     </div>
 
     <div class="lnk-group">
       <div class="lnk-group-label" id="lgl-platform">官方平台</div>
       <div class="link-grid">
-        <a class="link-item" href="待补充" target="_blank"><div class="li-ic">F</div><div><div class="li-nm">fromm</div><div class="li-sub">待补充链接</div></div></a>
-        <a class="link-item" href="待补充" target="_blank"><div class="li-ic">JP</div><div><div class="li-nm">日本官咖</div><div class="li-sub">待补充链接</div></div></a>
+        <a class="link-item" href="https://fromm.my/vWgfSK" target="_blank"><div class="li-ic">F</div><div><div class="li-nm">fromm</div><div class="li-sub">D&amp;E Official</div></div></a>
+        <a class="link-item" href="https://superjunior-dne.jp/" target="_blank"><div class="li-ic">JP</div><div><div class="li-nm">日本官咖</div><div class="li-sub">superjunior-dne.jp</div></div></a>
       </div>
     </div>
   </div>
@@ -91,15 +101,33 @@
   <!-- 专辑 -->
   <div class="section" id="albums">
     <div class="sec-label" id="sec-al">专辑</div>
-    <div class="al-grid">
-      <div class="al-card"><div class="al-yr">2015</div><div class="al-name">The Beat Goes On</div><div class="al-tag">1ST EP</div></div>
-      <div class="al-card"><div class="al-yr">2018</div><div class="al-name">'Bout You</div><div class="al-tag">2ND EP</div></div>
-      <div class="al-card"><div class="al-yr">2019</div><div class="al-name">Danger</div><div class="al-tag">3RD EP</div></div>
-      <div class="al-card"><div class="al-yr">2020</div><div class="al-name">Bad Blood</div><div class="al-tag">4TH EP</div></div>
-      <div class="al-card"><div class="al-yr">2024</div><div class="al-name">606</div><div class="al-tag">5TH EP</div></div>
-      <div class="al-card"><div class="al-yr">2014</div><div class="al-name">Ride Me</div><div class="al-tag">JP 1ST</div></div>
-      <div class="al-card"><div class="al-yr">2018</div><div class="al-name">Style</div><div class="al-tag">JP 2ND</div></div>
-      <div class="al-card"><div class="al-yr">2024</div><div class="al-name">You&amp;Me</div><div class="al-tag">JP 3RD EP</div></div>
+
+    <div class="al-group">
+      <div class="al-group-label" id="lgl-kr">韩国</div>
+      <div class="al-grid">
+        <div class="al-card"><div class="al-yr">2011</div><div class="al-name">Oppa, Oppa</div><div class="al-tags"><span class="al-tag single">单曲</span></div></div>
+        <div class="al-card"><div class="al-yr">2013</div><div class="al-name">Still You</div><div class="al-tags"><span class="al-tag single">单曲</span></div></div>
+        <div class="al-card"><div class="al-yr">2015</div><div class="al-name">The Beat Goes On</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">1ST EP</span></div></div>
+        <div class="al-card"><div class="al-yr">2018</div><div class="al-name">'Bout You</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">2ND EP</span></div></div>
+        <div class="al-card"><div class="al-yr">2019</div><div class="al-name">Danger</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">3RD EP</span></div></div>
+        <div class="al-card"><div class="al-yr">2020</div><div class="al-name">Bad Blood</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">4TH EP</span></div></div>
+        <div class="al-card"><div class="al-yr">2020</div><div class="al-name">Bad Liar</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">改版</span></div></div>
+        <div class="al-card"><div class="al-yr">2024</div><div class="al-name">606</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">5TH EP</span></div></div>
+      </div>
+    </div>
+
+    <div class="al-group">
+      <div class="al-group-label" id="lgl-jp">日本</div>
+      <div class="al-grid">
+        <div class="al-card"><div class="al-yr">2012</div><div class="al-name">Oppa, Oppa (JP)</div><div class="al-tags"><span class="al-tag single">单曲</span><span class="al-tag">JP 1ST</span></div></div>
+        <div class="al-card"><div class="al-yr">2013</div><div class="al-name">I Wanna Dance</div><div class="al-tags"><span class="al-tag single">单曲</span><span class="al-tag">JP 2ND</span></div></div>
+        <div class="al-card"><div class="al-yr">2014</div><div class="al-name">Skeleton</div><div class="al-tags"><span class="al-tag single">单曲</span><span class="al-tag">JP 3RD</span></div></div>
+        <div class="al-card"><div class="al-yr">2014</div><div class="al-name">Ride Me</div><div class="al-tags"><span class="al-tag">正规专辑</span><span class="al-tag">JP 1ST AL</span></div></div>
+        <div class="al-card"><div class="al-yr">2015</div><div class="al-name">Present</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">JP 1ST EP</span></div></div>
+        <div class="al-card"><div class="al-yr">2018</div><div class="al-name">Style</div><div class="al-tags"><span class="al-tag">正规专辑</span><span class="al-tag">JP 2ND AL</span></div></div>
+        <div class="al-card"><div class="al-yr">2024</div><div class="al-name">Like That</div><div class="al-tags"><span class="al-tag single">单曲</span></div></div>
+        <div class="al-card"><div class="al-yr">2024</div><div class="al-name">You&amp;Me</div><div class="al-tags"><span class="al-tag">迷你专辑</span><span class="al-tag">JP 2ND EP</span></div></div>
+      </div>
     </div>
   </div>
 
@@ -120,10 +148,10 @@
 
 <script>
 const T={
-  'zh-s':{mem:'成员',debut:'出道年份',ep:'迷你专辑',jpal:'日本专辑',links:'团队链接',al:'专辑',sch:'近期行程',back:'← 主页',team:'团队账号',show:'节目频道',platform:'官方平台'},
-  'zh-t':{mem:'成員',debut:'出道年份',ep:'迷你專輯',jpal:'日本專輯',links:'團隊連結',al:'專輯',sch:'近期行程',back:'← 主頁',team:'團隊帳號',show:'節目頻道',platform:'官方平台'},
-  'en':{mem:'Members',debut:'Debut Year',ep:'Mini Albums',jpal:'JP Albums',links:'Team Links',al:'Albums',sch:'Schedule',back:'← Home',team:'Group Accounts',show:'Show Channel',platform:'Official Platforms'},
-  'ko':{mem:'멤버',debut:'데뷔 연도',ep:'미니앨범',jpal:'일본앨범',links:'팀 링크',al:'앨범',sch:'일정',back:'← 홈',team:'그룹 계정',show:'방송 채널',platform:'공식 플랫폼'}
+  'zh-s':{mem:'成员',debut:'出道年份',ep:'迷你专辑',jpal:'日本专辑',mem_nav:'成员',links:'团队链接',al:'专辑',sch:'近期行程',back:'← 主页',team:'团队账号',show:'节目频道',platform:'官方平台',kr:'韩国',jp:'日本'},
+  'zh-t':{mem:'成員',debut:'出道年份',ep:'迷你專輯',jpal:'日本專輯',mem_nav:'成員',links:'團隊連結',al:'專輯',sch:'近期行程',back:'← 主頁',team:'團隊帳號',show:'節目頻道',platform:'官方平台',kr:'韓國',jp:'日本'},
+  'en':{mem:'Members',debut:'Debut Year',ep:'Mini Albums',jpal:'JP Albums',mem_nav:'Members',links:'Team Links',al:'Albums',sch:'Schedule',back:'← Home',team:'Group Accounts',show:'Show Channel',platform:'Official Platforms',kr:'Korean',jp:'Japanese'},
+  'ko':{mem:'멤버',debut:'데뷔 연도',ep:'미니앨범',jpal:'일본앨범',mem_nav:'멤버',links:'팀 링크',al:'앨범',sch:'일정',back:'← 홈',team:'그룹 계정',show:'방송 채널',platform:'공식 플랫폼',kr:'한국',jp:'일본'}
 };
 function setLang(l,btn){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
@@ -131,8 +159,9 @@ function setLang(l,btn){
   const t=T[l]||T['zh-s'];
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
   set('lb-mem',t.mem);set('lb-debut',t.debut);set('lb-ep',t.ep);set('lb-jpal',t.jpal);
-  set('nav-mem',t.mem);set('nav-links',t.links);set('nav-al',t.al);set('nav-sch',t.sch);set('nav-back',t.back);
+  set('nav-mem',t.mem_nav);set('nav-links',t.links);set('nav-al',t.al);set('nav-sch',t.sch);set('nav-back',t.back);
   set('lgl-team',t.team);set('lgl-show',t.show);set('lgl-platform',t.platform);
+  set('lgl-kr',t.kr);set('lgl-jp',t.jp);
   [['sec-mem',t.mem],['sec-links',t.links],['sec-al',t.al],['sec-sch',t.sch]].forEach(([id,v])=>{
     const el=document.getElementById(id);if(el&&el.firstChild)el.firstChild.textContent=v+' ';
   });
