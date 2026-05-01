@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SJ-D&amp;E · SUPER JUNIOR</title>
 <link rel="stylesheet" href="../style.css">
+<style>
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--blue-pale)}
+.tl-item:last-child{border-bottom:none}
+.tl-date{font-size:9px;letter-spacing:1px;color:var(--blue);white-space:nowrap;min-width:80px;padding-top:2px;font-family:Arial,sans-serif}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:4px}
+.tl-content{font-size:11px;color:var(--ink);line-height:1.6;font-family:Arial,sans-serif}
+.tl-tag{display:inline-block;font-size:8px;letter-spacing:1px;padding:1px 6px;background:var(--blue-pale);color:var(--blue);margin-top:3px}
+</style>
 </head>
 <body>
 
@@ -30,14 +39,23 @@
 </div>
 
 <nav>
-  <a href="#links" id="nav-links">团队链接</a>
   <a href="#members" id="nav-mem">成员</a>
+  <a href="#links" id="nav-links">团队链接</a>
   <a href="#albums" id="nav-al">专辑</a>
-  <a href="#mv" id="nav-mv">MV</a>
+  <a href="#schedule" id="nav-sch">近期行程</a>
   <a href="../index.html" id="nav-back">← 主页</a>
 </nav>
 
 <div class="body">
+
+  <!-- 成员 -->
+  <div class="section" id="members">
+    <div class="sec-label" id="sec-mem">成员</div>
+    <div class="link-grid">
+      <a class="link-item" href="../members/donghae.html"><div class="li-ic">DH</div><div><div class="li-nm">Donghae</div><div class="li-sub zhs">동해 · 东海</div><div class="li-sub zht" style="display:none">동해 · 東海</div><div class="li-sub eng" style="display:none">동해</div><div class="li-sub kor" style="display:none">동해</div></div></a>
+      <a class="link-item" href="../members/eunhyuk.html"><div class="li-ic">EH</div><div><div class="li-nm">Eunhyuk</div><div class="li-sub zhs">은혁 · 银赫</div><div class="li-sub zht" style="display:none">은혁 · 銀赫</div><div class="li-sub eng" style="display:none">은혁</div><div class="li-sub kor" style="display:none">은혁</div></div></a>
+    </div>
+  </div>
 
   <!-- 团队链接 -->
   <div class="section" id="links">
@@ -54,10 +72,10 @@
     </div>
 
     <div class="lnk-group">
-      <div class="lnk-group-label" id="lgl-personal">个人频道</div>
+      <div class="lnk-group-label" id="lgl-show">节目频道</div>
       <div class="link-grid">
-        <a class="link-item" href="https://www.youtube.com/@leedonghae" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">东海 YouTube</div><div class="li-sub">待补充链接</div></div></a>
-        <a class="link-item" href="https://www.youtube.com/@1ldaneunhyuk" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">银赫 YouTube</div><div class="li-sub">待补充链接</div></div></a>
+        <a class="link-item" href="https://m.youtube.com/@iamdongbaek" target="_blank"><div class="li-ic">▶</div><div><div class="li-nm">동백이다 YouTube</div><div class="li-sub">@iamdongbaek</div></div></a>
+        <a class="link-item" href="待补充" target="_blank"><div class="li-ic">◎</div><div><div class="li-nm">동백이다 Instagram</div><div class="li-sub">待补充</div></div></a>
       </div>
     </div>
 
@@ -67,15 +85,6 @@
         <a class="link-item" href="待补充" target="_blank"><div class="li-ic">F</div><div><div class="li-nm">fromm</div><div class="li-sub">待补充链接</div></div></a>
         <a class="link-item" href="待补充" target="_blank"><div class="li-ic">JP</div><div><div class="li-nm">日本官咖</div><div class="li-sub">待补充链接</div></div></a>
       </div>
-    </div>
-  </div>
-
-  <!-- 成员 -->
-  <div class="section" id="members">
-    <div class="sec-label" id="sec-mem">成员</div>
-    <div class="link-grid">
-      <a class="link-item" href="../members/donghae.html"><div class="li-ic">DH</div><div><div class="li-nm">Donghae</div><div class="li-sub zhs">동해 · 东海</div><div class="li-sub zht" style="display:none">동해 · 東海</div><div class="li-sub eng" style="display:none">동해</div><div class="li-sub kor" style="display:none">동해</div></div></a>
-      <a class="link-item" href="../members/eunhyuk.html"><div class="li-ic">EH</div><div><div class="li-nm">Eunhyuk</div><div class="li-sub zhs">은혁 · 银赫</div><div class="li-sub zht" style="display:none">은혁 · 銀赫</div><div class="li-sub eng" style="display:none">은혁</div><div class="li-sub kor" style="display:none">은혁</div></div></a>
     </div>
   </div>
 
@@ -94,34 +103,15 @@
     </div>
   </div>
 
-  <!-- MV -->
-  <div class="section" id="mv">
-    <div class="sec-label" id="sec-mv">MV</div>
-    <div class="mv-grid">
-      <a class="mv-card" href="https://youtu.be/TqPDyONJqtk" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">01</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Oppa, Oppa</div><div class="mv-meta">2011</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/p4bKmqFVPKo" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">02</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">Growing Pains</div><div class="mv-meta">2015</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/iiLRanMIh-o" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">03</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">'Bout You</div><div class="mv-meta">2018</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/X1jgb4oEfRk" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">04</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">B.A.D</div><div class="mv-meta">2020</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/qOzFRGPAoCs" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">05</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">GGB</div><div class="mv-meta">2024</div></div>
-      </a>
-      <a class="mv-card" href="https://youtu.be/zBLCYzgfvKc" target="_blank">
-        <div class="mv-thumb"><div class="mv-num">06</div><div class="mv-play"><div class="mv-arrow"></div></div></div>
-        <div class="mv-info"><div class="mv-title">DEparture Live 2024</div><div class="mv-meta">2024 · JP</div></div>
-      </a>
+  <!-- 近期行程 -->
+  <div class="section" id="schedule">
+    <div class="sec-label" id="sec-sch">近期行程</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">待添加</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">活动名称<br><span class="tl-tag">类型</span></div>
+      </div>
     </div>
   </div>
 
@@ -130,10 +120,10 @@
 
 <script>
 const T={
-  'zh-s':{mem:'成员',debut:'出道年份',ep:'迷你专辑',jpal:'日本专辑',links:'团队链接',al:'专辑',mv:'MV',back:'← 主页',team:'团队账号',personal:'个人频道',platform:'官方平台'},
-  'zh-t':{mem:'成員',debut:'出道年份',ep:'迷你專輯',jpal:'日本專輯',links:'團隊連結',al:'專輯',mv:'MV',back:'← 主頁',team:'團隊帳號',personal:'個人頻道',platform:'官方平台'},
-  'en':{mem:'Members',debut:'Debut Year',ep:'Mini Albums',jpal:'JP Albums',links:'Team Links',al:'Albums',mv:'MVs',back:'← Home',team:'Group Accounts',personal:'Personal Channels',platform:'Official Platforms'},
-  'ko':{mem:'멤버',debut:'데뷔 연도',ep:'미니앨범',jpal:'일본앨범',links:'팀 링크',al:'앨범',mv:'MV',back:'← 홈',team:'그룹 계정',personal:'개인 채널',platform:'공식 플랫폼'}
+  'zh-s':{mem:'成员',debut:'出道年份',ep:'迷你专辑',jpal:'日本专辑',links:'团队链接',al:'专辑',sch:'近期行程',back:'← 主页',team:'团队账号',show:'节目频道',platform:'官方平台'},
+  'zh-t':{mem:'成員',debut:'出道年份',ep:'迷你專輯',jpal:'日本專輯',links:'團隊連結',al:'專輯',sch:'近期行程',back:'← 主頁',team:'團隊帳號',show:'節目頻道',platform:'官方平台'},
+  'en':{mem:'Members',debut:'Debut Year',ep:'Mini Albums',jpal:'JP Albums',links:'Team Links',al:'Albums',sch:'Schedule',back:'← Home',team:'Group Accounts',show:'Show Channel',platform:'Official Platforms'},
+  'ko':{mem:'멤버',debut:'데뷔 연도',ep:'미니앨범',jpal:'일본앨범',links:'팀 링크',al:'앨범',sch:'일정',back:'← 홈',team:'그룹 계정',show:'방송 채널',platform:'공식 플랫폼'}
 };
 function setLang(l,btn){
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
@@ -141,9 +131,9 @@ function setLang(l,btn){
   const t=T[l]||T['zh-s'];
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
   set('lb-mem',t.mem);set('lb-debut',t.debut);set('lb-ep',t.ep);set('lb-jpal',t.jpal);
-  set('nav-links',t.links);set('nav-mem',t.mem);set('nav-al',t.al);set('nav-mv',t.mv);set('nav-back',t.back);
-  set('lgl-team',t.team);set('lgl-personal',t.personal);set('lgl-platform',t.platform);
-  [['sec-links',t.links],['sec-mem',t.mem],['sec-al',t.al],['sec-mv',t.mv]].forEach(([id,v])=>{
+  set('nav-mem',t.mem);set('nav-links',t.links);set('nav-al',t.al);set('nav-sch',t.sch);set('nav-back',t.back);
+  set('lgl-team',t.team);set('lgl-show',t.show);set('lgl-platform',t.platform);
+  [['sec-mem',t.mem],['sec-links',t.links],['sec-al',t.al],['sec-sch',t.sch]].forEach(([id,v])=>{
     const el=document.getElementById(id);if(el&&el.firstChild)el.firstChild.textContent=v+' ';
   });
   const langClass={'zh-s':'zhs','zh-t':'zht','en':'eng','ko':'kor'};
